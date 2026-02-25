@@ -16,15 +16,14 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <img class="brand-logo" src="assets/logo.svg" alt="Logo personální agentury Fundo Personal s.r.o." onerror="this.onerror=null; this.src='assets/logo.png'; this.onerror=function(){this.style.display='none'; this.nextElementSibling.style.display='inline';};">
-        <span class="brand-text">Fundo Personal s.r.o.</span>
+        <img class="brand-logo" src="logo.png" alt="Logo personální agentury Fundo Personal s.r.o.">
       </a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">Menu</button>
       <nav class="site-nav">
         <ul>
           <li><a href="index.html" class="nav-link active">Domů</a></li>
           <li><a href="services.html" class="nav-link">Služby</a></li>
-          <li><a href="services.html#uchazeci" class="nav-link">Hledat práci</a></li>
+          <li><a href="services.html#uchazeci" class="nav-link">Hledám práci</a></li>
           <li><a href="contact.html" class="nav-link">Kontakt</a></li>
           <li><a href="privacy.html" class="nav-link">GDPR</a></li>
         </ul>
@@ -33,65 +32,62 @@
   </header>
   <main>
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <p class="hero-eyebrow">Fundo Personal s.r.o.</p>
-          <h1>Fundo Personal: Váš partner pro strategický nábor a kariéru</h1>
-          <p class="hero-lead">Specialisté na vyhledávání talentů a flexibilní personální řešení. Propojujeme lidi a firmy v perspektivních oborech.</p>
-          <form class="job-search job-search-elevated" action="services.html" method="get">
-            <div class="job-search-grid">
-              <label>
-                <span>Pozice</span>
-                <input type="text" name="position" class="input" placeholder="Např. Operátor výroby, Skladník, HR specialista">
-              </label>
-              <label>
-                <span>Lokalita</span>
-                <input type="text" name="location" class="input" placeholder="Např. Praha, Brno, Ostrava">
-              </label>
-              <button type="submit" class="btn btn-primary">Hledat práci</button>
+      <div class="hero-image-full">
+        <img src="assets/images/temp.jpg" alt="Personální konzultantka vede pohovor s kandidátem">
+        <div class="hero-overlay">
+          <div class="container hero-inner">
+            <div class="hero-content">
+              <h1>OBJEVTE SVOU<br>KARIÉRNÍ PŘÍLEŽITOST</h1>
+              <p class="hero-lead">Kontaktujte nás a my vám najdeme novou práci nebo vhodné zaměstnance. Naši konzultanti se vám budou věnovat a společně najdeme řešení, které vám vyhovuje.</p>
+              <div class="hero-actions">
+                <a href="contact.html#contact-form" class="btn btn-primary">Kontaktujte nás</a>
+                <a href="services.html#firmy" class="btn btn-secondary">Hledám zaměstnance</a>
+              </div>
             </div>
-          </form>
-          <div class="hero-quick-links" aria-label="Rychlé odkazy">
-            <a class="hero-quick-link" href="services.html#uchazeci">Nabídky pro uchazeče</a>
-            <a class="hero-quick-link" href="services.html">Řešení pro firmy</a>
-            <a class="hero-quick-link" href="contact.html#contact-form">Konzultace s odborníkem</a>
-          </div>
-          <ul class="hero-trust-list">
-            <li>Rychlá reakce na poptávky do 24 hodin</li>
-            <li>Působnost po celé České republice</li>
-            <li>Transparentní a férový náborový proces</li>
-          </ul>
-        </div>
-        <div class="hero-media">
-          <div class="hero-image">
-            <img src="assets/images/1hiring.jpg" alt="Personální konzultantka vede pohovor s kandidátem">
           </div>
         </div>
       </div>
+    </section>
+    <section class="section section-tips">
       <div class="container">
-        <div class="hero-highlights hero-highlights-compact">
-          <article class="hero-highlight-card">
-            <h3>Hledám práci</h3>
-            <p>Aktuální nabídky napříč obory s podporou při výběru i nástupu.</p>
+        <header class="page-header page-header-compact">
+          <h2>Tipy při hledání práce</h2>
+        </header>
+        <div class="cards-grid tips-grid">
+          <article class="card tip-card">
+            <div class="card-body">
+              <h3>Specializované pozice</h3>
+              <p>Pozice ve světě logistiky, výroby, administrativy a mnoha dalších oborů. Najdeme vám práci, která odpovídá vašim zkušenostem.</p>
+              <a href="services.html#uchazeci" class="btn btn-secondary">Více informací</a>
+            </div>
           </article>
-          <article class="hero-highlight-card">
-            <h3>Hledám zaměstnance</h3>
-            <p>Rychlé obsazení dočasných i permanentních pozic podle potřeb firmy.</p>
+          <article class="card tip-card">
+            <div class="card-body">
+              <h3>Dbáme na legálnost</h3>
+              <p>U nás je vše fér a podle platných zákonů. Transparentní procesy a férové podmínky pro každého.</p>
+              <a href="privacy.html" class="btn btn-secondary">Více informací</a>
+            </div>
           </article>
-          <article class="hero-highlight-card">
-            <h3>HR poradenství</h3>
-            <p>Konzultace a outsourcing procesů pro stabilní růst personálních kapacit.</p>
+          <article class="card tip-card">
+            <div class="card-body">
+              <h3>Individuální přístup</h3>
+              <p>Každý kandidát má svého konzultanta, který mu pomůže najít ideální pozici a podpoří ho během celého procesu.</p>
+              <a href="contact.html#contact-form" class="btn btn-secondary">Kontaktujte nás</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
-    <section class="section section-about">
+    <section class="section section-about" style="background: #f5f8fc;">
       <div class="container">
         <div class="about-layout">
           <article class="about-panel">
             <p class="section-label">O nás</p>
-            <h2>Personální partner pro růst firem i kariér</h2>
-            <p>Fundo Personal s.r.o. je dynamická personální agentura. Naším cílem je kultivovat pracovní trh skrze férový přístup k uchazečům a efektivní služby pro naše partnery.</p>
+            <h2>Kontaktujte nás a my vám najdeme novou práci!</h2>
+            <p>Napište nám nebo zavolejte. Naši konzultanti se vám budou věnovat a společně najdeme pozici, na které zazáříte.</p>
+            <div class="hero-actions" style="margin-top: var(--spacing-lg);">
+              <a href="contact.html#contact-form" class="btn btn-primary">Kontaktujte nás</a>
+            </div>
           </article>
           <div class="about-metrics">
             <article class="metric-card">
@@ -130,22 +126,22 @@
           <div class="benefits-grid">
             <article class="card benefit-card">
               <div class="card-image">
-                <img src="assets/images/6hiring.jpg" alt="Kandidát na pracovním pohovoru v kanceláři">
+                <img src="assets/images/signing-contract.jpg" alt="Kandidát vyplňuje životopis a dokumenty">
               </div>
               <div class="card-body">
                 <h3>Hledám práci</h3>
-                <p>Registrujte se do naší databáze a získejte přístup k aktuálním pracovním nabídkám napříč obory.</p>
+                <p>Pošlete nám svůj životopis a údaje. Naši konzultanti vám najdou vhodnou pozici podle vašich zkušeností a preferencí.</p>
                 <ul class="benefit-list">
-                  <li>Registrace kandidátů zdarma</li>
-                  <li>Nabídky práce podle zkušeností a preferencí</li>
+                  <li>Konzultace zdarma</li>
+                  <li>Individuální přístup a personalizované nabídky</li>
                   <li>Podpora při přípravě na pohovor a nástup</li>
                 </ul>
-                <a href="contact.html#contact-form" class="btn btn-secondary">Registrovat se</a>
+                <a href="services.html#uchazeci" class="btn btn-secondary">Poslat životopis</a>
               </div>
             </article>
             <article class="card benefit-card">
               <div class="card-image">
-                <img src="assets/images/4hiring.jpg" alt="Náborový tým během výběrového řízení">
+                <img src="assets/images/selection-screen.jpg" alt="Náborový tým během výběrového řízení">
               </div>
               <div class="card-body">
                 <h3>Hledám zaměstnance</h3>
@@ -196,7 +192,7 @@
           </div>
           <div class="global-cta-actions">
             <a href="contact.html#contact-form" class="btn btn-light">Nezávazná konzultace</a>
-            <a href="services.html#uchazeci" class="btn btn-ghost-light">Hledat práci</a>
+            <a href="services.html#uchazeci" class="btn btn-ghost-light">Poslat životopis</a>
           </div>
         </div>
       </div>

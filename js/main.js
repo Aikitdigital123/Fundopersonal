@@ -99,3 +99,48 @@
     }, 250);
   });
 })();
+
+// Services Switch - aktivní stav tlačítek
+(function() {
+  'use strict';
+  
+  const servicesSwitchLinks = document.querySelectorAll('.services-switch-link');
+  
+  if (servicesSwitchLinks.length === 0) {
+    return;
+  }
+  
+  // Funkce pro aktualizaci aktivního stavu podle hash
+  function updateActiveLink() {
+    const hash = window.location.hash;
+    
+    servicesSwitchLinks.forEach(function(link) {
+      link.classList.remove('active');
+      
+      if (hash === '#firmy' && link.getAttribute('href') === '#firmy') {
+        link.classList.add('active');
+      } else if (hash === '#uchazeci' && link.getAttribute('href') === '#uchazeci') {
+        link.classList.add('active');
+      }
+      // Odstraněno výchozí aktivní - obě tlačítka budou mít stejný vzhled na začátku
+    });
+  }
+  
+  // Aktualizace při načtení stránky
+  updateActiveLink();
+  
+  // Aktualizace při změně hash
+  window.addEventListener('hashchange', updateActiveLink);
+  
+  // Kliknutí na tlačítko
+  servicesSwitchLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      // Odstranit active ze všech
+      servicesSwitchLinks.forEach(function(l) {
+        l.classList.remove('active');
+      });
+      // Přidat active na kliknuté
+      this.classList.add('active');
+    });
+  });
+})();
