@@ -32,8 +32,22 @@
   --transition: 0.2s ease;
 }
 
-* {
+/* Global Reset & Base Styles */
+*, *::before, *::after {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+:root {
+  --scroll-offset: 84px;
+}
+
+html, body {
+  max-width: 100%;
 }
 
 body {
@@ -44,12 +58,67 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+/* iOS tap highlight removal */
+a, button, .btn, .nav-link {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* iOS touch action optimization */
+.btn, button, input, textarea, select {
+  touch-action: manipulation;
+}
+
+/* Anchor scroll offset */
+[id] {
+  scroll-margin-top: var(--scroll-offset);
+}
+
+/* Responsive Media */
+img, svg, video {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: var(--spacing-md);
+}
+
+/* Typography fixes */
+p, li {
+  overflow-wrap: anywhere;
+}
+
+/* iOS form zoom bug fix */
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* Remove appearance only for text inputs (keep native for select, checkbox, radio, date, etc.) */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="file"] {
+  -webkit-appearance: none;
+}
+
+/* Safe area for iPhone notch */
+.site-header, .site-footer, main {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 /* Typography */
@@ -161,6 +230,8 @@ section:last-child {
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 8px 12px;
+  min-height: 44px;
+  min-width: 44px;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -275,7 +346,9 @@ section:last-child {
 /* Main content */
 main {
   padding: var(--spacing-3xl) 0;
-  min-height: calc(100vh - 200px);
+  min-height: 100svh;
+  min-height: 100dvh;
+  min-height: calc(100vh - 200px); /* Fallback pro starší prohlížeče */
 }
 
 .hero {
@@ -311,9 +384,9 @@ main {
 
 .hero-inner {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  padding-inline: var(--spacing-md);
   z-index: 2;
 }
 
@@ -640,13 +713,14 @@ main {
   justify-content: center;
   gap: 10px;
   padding: 12px 18px;
+  min-height: 44px;
   border-radius: 4px;
   font-weight: 700;
   text-decoration: none;
   border: 1px solid var(--primary);
   background: var(--primary);
   color: #fff;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.15s ease, border-color 0.15s ease;
   user-select: none;
   font-size: 1rem;
   line-height: 1.5;
@@ -667,14 +741,14 @@ main {
 
 .btn:hover,
 .button:hover {
-  background: var(--primary-700);
-  border-color: var(--primary-700);
-  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 .btn:active,
 .button:active {
   transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 .btn-primary {
@@ -692,8 +766,8 @@ main {
   color: #fff;
   background: var(--primary-700);
   border-color: var(--primary-700);
-  transform: translateY(-1px);
-  box-shadow: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 .btn-primary:active {
@@ -701,7 +775,7 @@ main {
   background: var(--primary-700);
   border-color: var(--primary-700);
   transform: translateY(0);
-  box-shadow: none;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 .btn-primary:focus-visible {
@@ -718,13 +792,15 @@ main {
   background: var(--primary-700);
   border-color: var(--primary-700);
   color: #fff;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 .btn-secondary:active {
   background: var(--primary-700);
   border-color: var(--primary-700);
   transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 /* Links */
@@ -1075,14 +1151,20 @@ main a:not(.btn):not(.button):focus-visible {
   max-width: 100%;
 }
 
-.input:focus,
-.input:focus-visible {
+.input:focus {
   outline: none;
   border-color: var(--primary);
 }
 
 .input:focus-visible {
+  outline: none;
+  border-color: var(--primary);
   box-shadow: 0 0 0 4px var(--ring);
+}
+
+/* Safari focus fallback */
+.input:focus:not(:focus-visible) {
+  border-color: var(--primary);
 }
 
 .input:invalid:not(:placeholder-shown) {
@@ -1611,9 +1693,9 @@ main a:not(.btn):not(.button):focus-visible {
   line-height: 1.35;
 }
 
-#firmy,
+#pro-firmy,
 #uchazeci {
-  scroll-margin-top: 110px;
+  scroll-margin-top: var(--scroll-offset);
 }
 
 .services-group-alt {
@@ -1796,15 +1878,15 @@ main a:not(.btn):not(.button):focus-visible {
   border-radius: var(--radius-lg);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
 .card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
   border-color: var(--primary);
 }
 
@@ -1979,7 +2061,7 @@ main a:not(.btn):not(.button):focus-visible {
   }
   
   .container {
-    padding: 0 var(--spacing-md);
+    padding-inline: var(--spacing-md);
   }
   
   main {
@@ -1991,10 +2073,40 @@ main a:not(.btn):not(.button):focus-visible {
   }
 }
 
+/* Trust Points */
+.trust-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 600px) {
+  .trust-points {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .trust-points {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.trust-points li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+}
+
 @media (max-width: 480px) {
   .site-nav .nav-link {
     padding: var(--spacing-xs) var(--spacing-sm);
     font-size: 0.875rem;
+    min-height: 44px;
   }
   
   .service-card {
@@ -2003,6 +2115,39 @@ main a:not(.btn):not(.button):focus-visible {
   
   .card-body {
     padding: 18px;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+  }
+  
+  .container {
+    padding-inline: var(--spacing-sm);
+  }
+}
+
+/* Very small screens (320px) */
+@media (max-width: 360px) {
+  .container {
+    padding-inline: var(--spacing-xs);
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+  
+  .hero-content .hero-lead {
+    font-size: 1rem;
+  }
+  
+  .site-nav .nav-link {
+    padding: 12px;
+    font-size: 0.875rem;
   }
 }
 
@@ -2083,4 +2228,26 @@ main a:not(.btn):not(.button):focus-visible {
 
 .privacy-card p:last-child {
   margin-bottom: 0;
+}
+
+/* Fade-in scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-in, .fade-in.visible, .btn, .card {
+    transition: none !important;
+    transform: none !important;
+  }
+  .fade-in { opacity: 1 !important; }
 }

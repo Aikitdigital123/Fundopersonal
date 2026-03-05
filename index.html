@@ -6,9 +6,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fundo Personal s.r.o. | Personální agentura</title>
-  <meta name="description" content="Propojujeme talenty s příležitostmi. Nábor zaměstnanců, outsourcing a podpora kandidátů při hledání práce.">
+  <meta name="description" content="Fundo Personal s.r.o. – personální agentura. Pomáháme firmám najít zaměstnance a lidem najít práci v ČR. Konzultace zdarma.">
   <meta property="og:title" content="Fundo Personal s.r.o. | Personální agentura">
   <meta property="og:description" content="Propojujeme talenty s příležitostmi. Nábor zaměstnanců, outsourcing a podpora kandidátů při hledání práce.">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/theme.css">
 </head>
@@ -21,17 +25,18 @@
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">Menu</button>
       <nav class="site-nav">
         <ul>
-          <li><a href="index.html" class="nav-link active">Domů</a></li>
+          <li><a href="index.html" class="nav-link">Domů</a></li>
           <li><a href="services.html" class="nav-link">Služby</a></li>
+          <li><a href="services.html#pro-firmy" class="nav-link">PRO FIRMY</a></li>
           <li><a href="services.html#uchazeci" class="nav-link">Hledám práci</a></li>
+          <li><a href="zivotopis.html" class="nav-link">Poslat životopis</a></li>
           <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-          <li><a href="privacy.html" class="nav-link">GDPR</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <section class="hero">
+    <section class="hero fade-in">
       <div class="hero-image-full">
         <img src="assets/images/temp.jpg" alt="Personální konzultantka vede pohovor s kandidátem">
         <div class="hero-overlay">
@@ -41,14 +46,24 @@
               <p class="hero-lead">Kontaktujte nás a my vám najdeme novou práci nebo vhodné zaměstnance. Naši konzultanti se vám budou věnovat a společně najdeme řešení, které vám vyhovuje.</p>
               <div class="hero-actions">
                 <a href="contact.html#contact-form" class="btn btn-primary">Kontaktujte nás</a>
-                <a href="services.html#firmy" class="btn btn-secondary">Hledám zaměstnance</a>
+                <a href="services.html#pro-firmy" class="btn btn-secondary">Hledám zaměstnance</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section section-tips">
+    <section class="section" style="background: #f5f8fc;">
+      <div class="container">
+        <ul class="trust-points">
+          <li>✓ Konzultace zdarma</li>
+          <li>✓ Rychlé obsazení pozic</li>
+          <li>✓ Individuální přístup</li>
+          <li>✓ Působnost po celé ČR</li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section-tips fade-in">
       <div class="container">
         <header class="page-header page-header-compact">
           <h2>Tipy při hledání práce</h2>
@@ -65,7 +80,7 @@
             <div class="card-body">
               <h3>Dbáme na legálnost</h3>
               <p>U nás je vše fér a podle platných zákonů. Transparentní procesy a férové podmínky pro každého.</p>
-              <a href="privacy.html" class="btn btn-secondary">Více informací</a>
+              <a href="legalni-zamestnani.html" class="btn btn-secondary">Více informací</a>
             </div>
           </article>
           <article class="card tip-card">
@@ -78,7 +93,32 @@
         </div>
       </div>
     </section>
-    <section class="section section-about" style="background: #f5f8fc;">
+    <section class="section fade-in">
+      <div class="container">
+        <header class="page-header page-header-compact">
+          <h2>Nejčastější dotazy</h2>
+        </header>
+        <div style="max-width: 800px; margin: 0 auto;">
+          <details style="margin-bottom: var(--spacing-md); padding: var(--spacing-md); border: 1px solid var(--border); border-radius: var(--radius-md);">
+            <summary style="font-weight: 600; cursor: pointer; padding-left: var(--spacing-lg); position: relative;">Musím platit za zprostředkování práce?</summary>
+            <p style="margin-top: var(--spacing-md); margin-left: var(--spacing-lg);">Ne. Pro kandidáty je naše služba zdarma.</p>
+          </details>
+          <details style="margin-bottom: var(--spacing-md); padding: var(--spacing-md); border: 1px solid var(--border); border-radius: var(--radius-md);">
+            <summary style="font-weight: 600; cursor: pointer; padding-left: var(--spacing-lg); position: relative;">Jak rychle mě budete kontaktovat?</summary>
+            <p style="margin-top: var(--spacing-md); margin-left: var(--spacing-lg);">Obvykle do 24 hodin v pracovních dnech.</p>
+          </details>
+          <details style="margin-bottom: var(--spacing-md); padding: var(--spacing-md); border: 1px solid var(--border); border-radius: var(--radius-md);">
+            <summary style="font-weight: 600; cursor: pointer; padding-left: var(--spacing-lg); position: relative;">Co potřebuji k registraci?</summary>
+            <p style="margin-top: var(--spacing-md); margin-left: var(--spacing-lg);">Stačí základní kontakt a životopis (PDF/DOC/DOCX).</p>
+          </details>
+          <details style="margin-bottom: var(--spacing-md); padding: var(--spacing-md); border: 1px solid var(--border); border-radius: var(--radius-md);">
+            <summary style="font-weight: 600; cursor: pointer; padding-left: var(--spacing-lg); position: relative;">Působíte jen v Praze?</summary>
+            <p style="margin-top: var(--spacing-md); margin-left: var(--spacing-lg);">Ne. Působíme po celé České republice.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="section section-about fade-in" style="background: #f5f8fc;">
       <div class="container">
         <div class="about-layout">
           <article class="about-panel">
@@ -106,7 +146,7 @@
         </div>
       </div>
     </section>
-    <section class="section section-why">
+    <section class="section section-why fade-in">
       <div class="container">
         <header class="page-header page-header-compact">
           <p class="section-label">Proč my</p>
@@ -136,7 +176,7 @@
                   <li>Individuální přístup a personalizované nabídky</li>
                   <li>Podpora při přípravě na pohovor a nástup</li>
                 </ul>
-                <a href="services.html#uchazeci" class="btn btn-secondary">Poslat životopis</a>
+                <a href="zivotopis.html" class="btn btn-secondary">Poslat životopis</a>
               </div>
             </article>
             <article class="card benefit-card">
@@ -192,7 +232,7 @@
           </div>
           <div class="global-cta-actions">
             <a href="contact.html#contact-form" class="btn btn-light">Nezávazná konzultace</a>
-            <a href="services.html#uchazeci" class="btn btn-ghost-light">Poslat životopis</a>
+            <a href="zivotopis.html" class="btn btn-ghost-light">Poslat životopis</a>
           </div>
         </div>
       </div>
@@ -207,7 +247,7 @@
       </div>
       <div class="footer-right">
         <div><strong>Název:</strong> Fundo Personal s.r.o.</div>
-        <div><strong>E-mail:</strong> info@fundopersonal.cz</div>
+        <div><strong>E-mail:</strong> <a href="mailto:personalni@fundopersonal.cz">personalni@fundopersonal.cz</a></div>
         <div><strong>Lokalita:</strong> Česká republika (působnost po celé ČR)</div>
         <a class="footer-link" href="privacy.html">Ochrana údajů</a>
         <a class="footer-link" href="impressum.html">Provozovatel</a>

@@ -9,6 +9,10 @@
   <meta name="description" content="Služby pro firmy i uchazeče: agenturní zaměstnávání, permanent recruitment, HR poradenství, brigády, HPP a kariérní koučink.">
   <meta property="og:title" content="Služby | Fundo Personal s.r.o. Personální agentura">
   <meta property="og:description" content="Služby pro firmy i uchazeče: agenturní zaměstnávání, permanent recruitment, HR poradenství, brigády, HPP a kariérní koučink.">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/theme.css">
 </head>
@@ -22,10 +26,11 @@
       <nav class="site-nav">
         <ul>
           <li><a href="index.html" class="nav-link">Domů</a></li>
-          <li><a href="services.html" class="nav-link active">Služby</a></li>
-          <li><a href="services.html#uchazeci" class="nav-link">Hledat práci</a></li>
+          <li><a href="services.html" class="nav-link">Služby</a></li>
+          <li><a href="services.html#pro-firmy" class="nav-link">PRO FIRMY</a></li>
+          <li><a href="services.html#uchazeci" class="nav-link">Hledám práci</a></li>
+          <li><a href="zivotopis.html" class="nav-link">Poslat životopis</a></li>
           <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-          <li><a href="privacy.html" class="nav-link">GDPR</a></li>
         </ul>
       </nav>
     </div>
@@ -65,11 +70,11 @@
         </header>
 
         <nav class="services-switch" aria-label="Přepnout typ služeb">
-          <a href="#firmy" class="services-switch-link">Hledám zaměstnance</a>
+          <a href="#pro-firmy" class="services-switch-link">Hledám zaměstnance</a>
           <a href="#uchazeci" class="services-switch-link">Hledám práci</a>
         </nav>
 
-        <section class="services-group" id="firmy" aria-label="Služby pro firmy">
+        <section class="services-group" id="pro-firmy" aria-label="Služby pro firmy">
           <header class="services-group-header">
             <p class="section-label">Pro firmy</p>
             <h3>Komplexní personální řešení pro stabilní růst týmů</h3>
@@ -122,7 +127,7 @@
               <div class="card-body">
                 <h3>Práce ve výrobě</h3>
                 <p>Nabízíme pozice ve výrobních provozech, montážních halách a průmyslových závodech. Stabilní zaměstnání s možností kariérního růstu a směnným provozem. Ideální pro ty, kteří hledají práci v technickém prostředí.</p>
-                <a href="contact.html#contact-form" class="btn btn-primary">Zjistit více</a>
+                <a href="services.html#uchazeci" class="btn btn-primary">Zjistit více</a>
               </div>
             </article>
             <article class="card service-card">
@@ -132,17 +137,17 @@
               <div class="card-body">
                 <h3>Práce v logistice</h3>
                 <p>Hledáme pracovníky do skladů, distribučních center a logistických hal. Pozice skladníků, operátorů VZV, kompletářů a dalších. Flexibilní pracovní doba a možnost přesčasů. Vhodné pro začátečníky i zkušené pracovníky.</p>
-                <a href="contact.html#contact-form" class="btn btn-primary">Zjistit více</a>
+                <a href="services.html#uchazeci" class="btn btn-primary">Zjistit více</a>
               </div>
             </article>
             <article class="card service-card">
               <div class="card-image">
-                <img src="assets/images/selection-screen.jpg" alt="Administrativní a kancelářské pozice">
+                <img src="assets/images/meeting-table2.jpg" alt="Administrativní a kancelářské pozice">
               </div>
               <div class="card-body">
                 <h3>Administrativní pozice</h3>
                 <p>Nabízíme práci v kancelářích, call centrech a administrativních odděleních. Pozice asistentů, úředníků, operátorů a dalších. Pracovní doba většinou v běžných úředních hodinách. Vhodné pro absolventy i zkušené pracovníky.</p>
-                <a href="contact.html#contact-form" class="btn btn-primary">Zjistit více</a>
+                <a href="services.html#uchazeci" class="btn btn-primary">Zjistit více</a>
               </div>
             </article>
             <article class="card service-card">
@@ -152,61 +157,14 @@
               <div class="card-body">
                 <h3>Brigády a dočasné práce</h3>
                 <p>Krátkodobé i dlouhodobé brigády vhodné pro studenty i zájemce o flexibilní režim. Pomůžeme vám vybrat směny a lokalitu podle vašich časových možností. Možnost přechodu na trvalé zaměstnání.</p>
-                <a href="contact.html#contact-form" class="btn btn-primary">Zjistit více</a>
+                <a href="services.html#uchazeci" class="btn btn-primary">Zjistit více</a>
               </div>
             </article>
           </div>
           
-          <div class="candidate-form-wrapper">
-            <form id="candidate-form" class="candidate-form" action="#" method="post" enctype="multipart/form-data">
-              <div class="candidate-form-header">
-                <p class="section-label">Kontakt</p>
-                <h3 class="candidate-form-title">Kontaktujte nás a my vám najdeme vhodnou práci</h3>
-                <p class="form-intro">Vyplňte prosím formulář a přiložte svůj životopis. Naši konzultanti vás budou kontaktovat s vhodnými nabídkami práce. Konzultace je zdarma a nezávazná.</p>
-              </div>
-              
-              <div class="candidate-form-grid">
-                <div class="form-group form-group-full">
-                  <label>Jméno a příjmení *</label>
-                  <input type="text" name="name" class="input" placeholder="Jan Novák" required>
-                </div>
-                
-                <div class="form-group">
-                  <label>Telefon *</label>
-                  <input type="tel" name="phone" class="input" placeholder="+420 777 000 000" required>
-                </div>
-                
-                <div class="form-group">
-                  <label>Email *</label>
-                  <input type="email" name="email" class="input" placeholder="vas@email.cz" required>
-                </div>
-                
-                <div class="form-group">
-                  <label>Preferovaná lokalita</label>
-                  <input type="text" name="location" class="input" placeholder="Např. Praha, Brno, Ostrava">
-                </div>
-                
-                <div class="form-group">
-                  <label>Obor nebo pozice, kterou hledáte</label>
-                  <input type="text" name="position" class="input" placeholder="Např. Skladník, Operátor výroby">
-                </div>
-                
-                <div class="form-group form-group-full">
-                  <label>Zkušenosti a poznámky</label>
-                  <textarea name="experience" class="input" rows="4" placeholder="Stručně popište své zkušenosti, vzdělání nebo další informace, které by pro nás mohly být důležité."></textarea>
-                </div>
-                
-                <div class="form-group form-group-full">
-                  <label>Životopis (PDF, DOC, DOCX) *</label>
-                  <input type="file" name="cv" class="input input-file" accept=".pdf,.doc,.docx" required>
-                </div>
-              </div>
-              
-              <div class="candidate-form-footer">
-                <p class="form-consent">Odesláním formuláře souhlasíte se zpracováním osobních údajů za účelem vyhledávání vhodných pracovních pozic a komunikace s našimi konzultanty.</p>
-                <button type="submit" class="btn btn-primary">Odeslat životopis</button>
-              </div>
-            </form>
+          <div class="services-bottom-cta" style="margin-top: var(--spacing-2xl);">
+            <p>Chcete poslat svůj životopis? Vyplňte formulář a my vám najdeme vhodnou práci.</p>
+            <a href="zivotopis.html" class="btn btn-primary">Poslat životopis</a>
           </div>
           
           <div class="services-bottom-cta" style="margin-top: var(--spacing-2xl);">
@@ -227,7 +185,7 @@
           </div>
           <div class="global-cta-actions">
             <a href="contact.html#contact-form" class="btn btn-light">Nezávazná konzultace</a>
-            <a href="services.html#uchazeci" class="btn btn-ghost-light">Poslat životopis</a>
+            <a href="zivotopis.html" class="btn btn-ghost-light">Poslat životopis</a>
           </div>
         </div>
       </div>
@@ -241,7 +199,7 @@
       </div>
       <div class="footer-right">
         <div><strong>Název:</strong> Fundo Personal s.r.o.</div>
-        <div><strong>E-mail:</strong> info@fundopersonal.cz</div>
+        <div><strong>E-mail:</strong> <a href="mailto:personalni@fundopersonal.cz">personalni@fundopersonal.cz</a></div>
         <div><strong>Lokalita:</strong> Česká republika (působnost po celé ČR)</div>
         <a class="footer-link" href="privacy.html">Ochrana údajů</a>
         <a class="footer-link" href="impressum.html">Provozovatel</a>
