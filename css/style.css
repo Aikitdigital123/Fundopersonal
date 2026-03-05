@@ -345,7 +345,8 @@ section:last-child {
 
 /* Main content */
 main {
-  padding: var(--spacing-3xl) 0;
+  padding-top: 0;
+  padding-bottom: var(--spacing-3xl);
   min-height: 100svh;
   min-height: 100dvh;
   min-height: calc(100vh - 200px); /* Fallback pro starší prohlížeče */
@@ -354,6 +355,7 @@ main {
 .hero {
   padding: 0;
   position: relative;
+  margin-top: 0;
 }
 
 .hero-image-full {
@@ -402,9 +404,12 @@ main {
 
 @media (max-width: 768px) {
   .hero-image-full {
-    height: 400px;
+    height: auto;
+    min-height: calc(100svh - var(--scroll-offset) - 60px);
+    min-height: calc(100dvh - var(--scroll-offset) - 60px);
+    min-height: calc(100vh - var(--scroll-offset) - 60px);
+    max-height: 500px;
   }
-  
   
   .hero-content h1 {
     font-size: clamp(2rem, 8vw, 3rem);
@@ -2057,7 +2062,8 @@ main a:not(.btn):not(.button):focus-visible {
   }
 
   .hero {
-    padding: var(--spacing-2xl) 0;
+    padding-top: var(--spacing-sm);
+    padding-bottom: 0;
   }
   
   .container {
@@ -2065,11 +2071,16 @@ main a:not(.btn):not(.button):focus-visible {
   }
   
   main {
-    padding: var(--spacing-xl) 0;
+    padding-top: 0;
+    padding-bottom: var(--spacing-xl);
   }
   
   section {
     margin-bottom: var(--spacing-xl);
+  }
+  
+  section:last-child {
+    margin-bottom: 0;
   }
 }
 
