@@ -40,7 +40,7 @@
       <div class="container">
         <header class="page-header page-header-compact">
           <h1>Poslat životopis</h1>
-          <p class="lead">Vyplňte formulář a přiložte svůj životopis. Ozveme se vám co nejdříve.</p>
+          <p class="lead">Vyplňte formulář a vložte odkaz na svůj životopis (např. Google Drive nebo OneDrive). Ozveme se vám co nejdříve.</p>
         </header>
 
         <div class="contact-layout contact-layout-enhanced">
@@ -48,19 +48,18 @@
             <input type="hidden" name="access_key" value="1f0cc689-1b36-431f-bd36-7a35517f9bf1">
             <input type="checkbox" name="botcheck" style="display:none">
             <input type="hidden" name="to_email" value="personalni@fundopersonal.cz">
-            <input type="hidden" name="subject" value="Nový životopis z webu Fundo Personal">
+            <input type="hidden" name="subject" value="Nový životopis (odkaz na CV) z webu Fundo Personal">
             <input type="hidden" name="form_type" value="Zivotopis">
             <input type="hidden" name="page" id="cv-form-page">
             <input type="hidden" name="redirect" value="https://fundopersonal.cz/dekujeme.html">
             <p class="section-label">Formulář</p>
             <h3 class="contact-form-title">Pošlete nám svůj životopis</h3>
-            <p class="form-intro">Vyplňte prosím formulář a přiložte svůj životopis. Naši konzultanti vás budou kontaktovat s vhodnými nabídkami práce.</p>
+            <p class="form-intro">Vyplňte formulář a vložte odkaz na svůj životopis (např. Google Drive nebo OneDrive). Naši konzultanti vás budou kontaktovat s vhodnými nabídkami práce.</p>
             <p><label>Jméno a příjmení *<br><input type="text" name="name" class="input" placeholder="Jan Novák" required></label></p>
             <p><label>Email *<br><input type="email" name="email" class="input" placeholder="vas@email.cz" required></label></p>
             <p><label>Telefon *<br><input type="tel" name="phone" class="input" placeholder="+420 777 000 000" required></label></p>
             <p><label>Pozice / oblast *<br><input type="text" name="position" class="input" placeholder="Např. Skladník, Operátor výroby, Asistent" required></label></p>
-            <p><label>Životopis (PDF, DOC, DOCX) *<br><input type="file" name="attachment" class="input input-file" accept=".pdf,.doc,.docx" required></label></p>
-            <p class="form-file-note" style="font-size: 0.875rem; color: var(--muted); margin-top: -0.5rem; margin-bottom: var(--spacing-md);">Maximální velikost souboru: 10 MB</p>
+            <p><label>Odkaz na životopis (Google Drive / OneDrive) *<br><input type="url" name="cv_link" class="input" placeholder="https://drive.google.com/..." required></label></p>
             <p><label>Zpráva (nepovinné)<br><textarea name="message" class="input" rows="5" placeholder="Stručně popište své zkušenosti nebo další informace, které by pro nás mohly být důležité."></textarea></label></p>
             <p class="form-consent">Odesláním formuláře souhlasíte se zpracováním osobních údajů za účelem vyhledávání vhodných pracovních pozic a komunikace s našimi konzultanty.</p>
             <p><button type="submit" class="btn btn-primary">Odeslat životopis</button></p>
