@@ -226,7 +226,7 @@
   });
 })();
 
-// Nastavení URL stránky do formulářů Web3Forms
+// Nastavení URL stránky do formulářů (FormSubmit)
 document.addEventListener("DOMContentLoaded", function() {
   const contactPageField = document.getElementById("contact-form-page");
   const cvPageField = document.getElementById("cv-form-page");
